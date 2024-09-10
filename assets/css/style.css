@@ -5,6 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", system-ui;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -12,6 +18,40 @@ body{
     background: url(../images/background-gp-integral.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
+
+}
+
+/*============REUSABLE CSS CLASSES===========*/
+
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.2rem;
+}
+
+.section{
+    padding-block: 5rem 1rem;
+}
+
+.section__title, .section__subtitle{
+    text-align: center;  
+}
+
+.section__title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.section__subtitle{
+    color: #fea814;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .header{
@@ -35,7 +75,7 @@ body{
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .6);
     backdrop-filter: blur(20px);
     z-index: -1;
 }
@@ -82,15 +122,199 @@ body{
     display: none;
 }
 
-/*BREAKPOINTS*/
+
+
+/* .home{
+    position: fixed;
+    top: 25%;
+    left: 8%;
+} */
+
+
+.home__img-1, .home__img-2{
+    width: 200px;
+}
+
+.home__container{
+    position: relative;
+    row-gap: 3rem;
+    padding-block: 2rem 6rem;
+}
+
+.home__content{
+    row-gap: 2.5rem;
+    background-color: rgba(0, 0, 0, .4);
+    margin-top: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    width: 100%;
+    padding:2rem;
+}
+
+.home__data, .home__info{
+    text-align: center;
+    width: 65%;
+}
+
+.home__tittle, .home__description{
+    color: #ffffff;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, .5);
+}
+
+.home__tittle{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 6%;
+}
+
+.home__description{
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+.home__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+
+.button__productos, .button__services{
+    height: 5rem;
+    padding: 1rem 2rem;
+}
+
+.button__services, .button{
+    color: #fff;
+    /* padding: 1rem 2.8rem; */
+    font-size: 1.4rem;
+    background: linear-gradient(45deg, #dc6504, #dc7704, #fea814);
+}
+
+/* .button__services:hover{
+    padding: .9rem 2.9rem;
+    font-size: 1.35rem;
+    transition: .3s;
+} */
+
+.button__productos{
+    /* padding: 1rem 2rem; */
+    background: black;
+    /* padding-left: 1.8rem; */
+    font-size: 1.4rem;
+    color: #dc6504;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.button__productos:hover i{
+   transform: translateX(.35rem); 
+   transition: .3s;
+}
+
+/* .button__productos:hover{
+    font-size: 1.5rem;
+    transition: .3s;
+} */
+
+.bx-right-arrow-alt{
+    font-size: 1.8rem;
+}
+
+.home__info {
+    display: flex;
+    justify-content: center;
+    column-gap: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.home__info-tittle{
+    color: #fea814;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
+    text-align: center;
+}
+
+.home__info-description{
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
+}
+
+.home__images{
+   position: relative;
+   justify-self: center;
+}
+
+.home__img-1{
+    width: 350px;
+    margin-left: 3.5rem;
+}
+
+.home__img-2{
+    width: 200px;
+    border: 5px solid black;
+    position: absolute;
+    left: -.87rem;
+    bottom: -3.2rem;
+}
+
+/* https://www.youtube.com/watch?v=IOyZO_l94ME&list=PL07efmqYWHZ_cxA1GvuXQMA-VYk8dhuiv */
+
+/* ============= ABOUT =========== */
+.about{
+    background: #fff;
+}
+
+.about__container{
+    row-gap: 8rem;
+}
+
+.about__data{
+    text-align: center;
+}
+
+.about__description{
+    margin-bottom: 2rem;
+}
+
+.about__list{
+    text-align: initial;
+    grid-template-columns: repeat(2, 130px);
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.button-about{
+    padding: .5rem 1.5rem;
+    font-weight: 500;
+}
+
+/*==========BREAKPOINTS===========*/
+
+@media screen and (min-width: 1150px){
+
+}
 
 @media (max-width: 992px){
     .header{
         padding: 1.3rem 5%;
     }
+    .home__data, .home__info{
+        width: 80%;
+    }
 }
 
 @media (max-width: 768px){
+    .home__data, .home__info{
+        width: 90%;
+    }
     .icons{
         display: inline-flex
     }
@@ -113,8 +337,8 @@ body{
         left: 0;
         width: 100%;
         height: 0;
-        background: rgba(0, 0, 0, .4);
-        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, .6);
+        backdrop-filter: blur(40px);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
         overflow: hidden;
         transition: .3s ease;
@@ -126,7 +350,8 @@ body{
 
     .navbar a{
         display: block;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        text-shadow: 1.5px 1.5px 2px rgb(0, 0, 0);
         margin: 1.5rem 0;
         text-align: center;
         opacity: 0;
@@ -141,3 +366,19 @@ body{
     }
 }
 
+/* ============SCROLL BAR========= */
+::-webkit-scrollbar{
+    width: .8rem;
+    background-color: hsl(168, 5%, 59%);
+    
+}
+
+::-webkit-scrollbar-thumb{
+    width: .6rem;
+    background-color: hsl(165, 2%, 35%);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    width: .6rem;
+    background-color: hsl(165, 2%, 25%);
+}
